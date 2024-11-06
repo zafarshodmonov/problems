@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Problems</title>
+</head>
+<body>
+    <h1>Masalalar Ro'yxati</h1>
+    <ul>
+        {% for problem in problems %}
+            <li>
+                <a href="{% url 'problem_detail' problem.pk %}">{{ problem.title }}</a>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

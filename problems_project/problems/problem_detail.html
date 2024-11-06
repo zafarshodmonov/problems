@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ problem.title }}</title>
+</head>
+<body>
+    <h1>{{ problem.title }}</h1>
+    <p>Murakkablik: {{ problem.difficulty }}%</p>
+    <p>Vaqt Chegarasi: {{ problem.time_limit }} ms</p>
+    <p>Xotira Chegarasi: {{ problem.memory_limit }} MB</p>
+    <p>{{ problem.description }}</p>
+    <p><strong>Kirish Ma'lumotlari:</strong> {{ problem.input_format }}</p>
+    <p><strong>Chiqish Ma'lumotlari:</strong> {{ problem.output_format }}</p>
+    <p><strong>Misol:</strong> {{ problem.example }}</p>
+    <a href="{% url 'download_problem_pdf' problem.pk %}">PDF formatda yuklab olish</a>
+</body>
+</html>
